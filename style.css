@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url('https://static.vecteezy.com/system/resources/previews/013/224/049/non_2x/home-office-web-banner-freelance-doodle-concept-free-vector.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add a semi-transparent overlay for readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 5px; /* Reduced padding */
+    font-size: 20px; /* Reduced font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Task Assignment Section */
+#assignTaskSection {
+    background: rgba(255, 255, 255, 0.9);
+    width: 50%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Task Input Field */
+#taskDesc {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 50px;
+}
+
+/* Multi-Select Dropdown */
+#teacherList {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    height: 150px;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 20px;
+    background: #ed412e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #d62d1b;
+    transform: scale(1.05);
+}
+
+/* Logout Button */
+.logout-btn {
+    margin-top: 20px;
+    background: #ed412e;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    width: 150px;
+}
+
+.logout-btn:hover {
+    background: #d62d1b;
+}
+
+/* Task Sections */
+#acceptedTaskSection,
+#waitingTaskSection,
+#deniedTaskSection {
+    background: rgba(255, 255, 255, 0.9);
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#acceptedTaskList,
+#waitingTaskList,
+#deniedTaskList {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Task List Items */
+#acceptedTaskList li,
+#waitingTaskList li,
+#deniedTaskList li {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+}
+
+#acceptedTaskList li:hover,
+#waitingTaskList li:hover,
+#deniedTaskList li:hover {
+    background: #f9f9f9;
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #assignTaskSection,
+    #acceptedTaskSection,
+    #waitingTaskSection,
+    #deniedTaskSection {
+        width: 80%;
+    }
+    
+    #teacherList {
+        height: 120px;
+    }
+}
